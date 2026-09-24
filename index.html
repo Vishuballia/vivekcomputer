@@ -82,6 +82,53 @@
       *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
       .reveal{opacity:1;transform:none}
     }
+
+    /* ===== Visibility Fix: Hero section =====
+       Keeps the hero dark even if another stylesheet/Tailwind utility
+       overrides the original background/text colors. */
+    .hero{
+      background:
+        radial-gradient(circle at 10% 15%, rgba(34,211,238,.20), transparent 28%),
+        radial-gradient(circle at 85% 20%, rgba(251,191,36,.18), transparent 25%),
+        linear-gradient(135deg,#031b46 0%,#073b91 48%,#0b5ed7 100%) !important;
+      color:#ffffff !important;
+    }
+
+    .hero h1,
+    .hero h1 *{
+      color:#ffffff !important;
+    }
+
+    .hero h1 .text-amber-300{
+      color:#fbbf24 !important;
+    }
+
+    .hero p.text-blue-100{
+      color:#dbeafe !important;
+    }
+
+    .hero .text-blue-50{
+      color:#eff6ff !important;
+    }
+
+    .hero .text-blue-200{
+      color:#bfdbfe !important;
+    }
+
+    .hero .text-blue-100{
+      color:#dbeafe !important;
+    }
+
+    /* Make the small hero labels/buttons readable too. */
+    .hero .border-white\/15,
+    .hero .border-white\/30{
+      border-color:rgba(255,255,255,.22) !important;
+    }
+
+    .hero .glass{
+      background:rgba(255,255,255,.10) !important;
+    }
+
   </style>
 </head>
 
